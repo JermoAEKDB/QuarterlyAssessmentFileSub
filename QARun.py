@@ -1,7 +1,12 @@
 import sqlite3
 
+# ANSI escape codes for colors
+GREEN = '\033[92m'
+RED = '\033[91m'
+RESET = '\033[0m'
+
 def get_author_data(author):
-    conn = sqlite3.connect("QuarterlyAssessmentDB.sql")
+    conn = sqlite3.connect("questions_answers.db")
     cursor = conn.cursor()
 
     cursor.execute(f"SELECT question, answer FROM {author}")
@@ -19,10 +24,10 @@ def evaluate_responses(author_data, user_responses):
         user_answer = input(f"{question}: ").strip().lower()
 
         if user_answer == correct_answer.lower():
-            print("Correct!")
+            print(f"{GREEN}Correct!{RESET}")
             correct_count += 1
         else:
-            print(f"Incorrect! Correct answer: {correct_answer}")
+            print(f"{RED}Incorrect! Correct answer: {correct_answer}{RESET}")
             incorrect_count += 1
 
     print("\nQuiz Result:")
