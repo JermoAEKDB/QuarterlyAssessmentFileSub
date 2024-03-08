@@ -1,5 +1,5 @@
 -- database: :memory:
-ATTACH DATABASE 'jeremyocampo@Jerms-MBP QuarterlyAssessmentFolder % ' AS QuarterlyAssessmentConnectionJO;
+ATTACH DATABASE '/Users/jeremyocampo/QuarterlyAssessmentFolder' AS QuarterlyAssessmentConnectionJO;
 
 CREATE TABLE IF NOT EXISTS Categories (
     CategoryID INTEGER PRIMARY KEY,
@@ -61,31 +61,31 @@ CREATE TABLE IF NOT EXISTS Answers (
 
 INSERT INTO Answers (QuestionID, AnswerText, IsCorrect) VALUES
     (1, 'Of Plymouth Plantation', 1),
-    (1, 'Mayflower Compact', 0),
-    (1, 'Edward Winslow', 0),
-    (1, 'Drafting and signing the compact', 1),
-    (1, 'Plymouth, Massachusetts', 0),
+    (2, 'Mayflower Compact', 0),
+    (3, 'Edward Winslow', 0),
+    (4, 'Drafting and signing the compact', 1),
+    (5, 'Plymouth, Massachusetts', 0),
 
     (6, 'Letters from an American Farmer', 1),
-    (6, '19th century', 0),
-    (6, 'Melting Pot', 1),
-    (6, 'France', 1),
-    (6, 'Farmer', 1),
+    (7, '19th century', 0),
+    (8, 'Melting Pot', 1),
+    (9, 'France', 1),
+    (10, 'Farmer', 1),
 
     (11, 'The Scarlet Letter', 1),
-    (11, 'Massachusetts', 1),
-    (11, 'Secret sins and guilt', 1),
-    (11, 'Twice-Told Tales', 1),
-    (11, 'Hepzibah Pyncheon', 1),
+    (12, 'Massachusetts', 1),
+    (13, 'Secret sins and guilt', 1),
+    (14, 'Twice-Told Tales', 1),
+    (15, 'Hepzibah Pyncheon', 1),
 
     (16, 'Congregants in Northampton, Massachusetts', 1),
-    (16, 'Great Awakening', 1),
-    (16, 'Sinners in the Hands of an Angry God', 1),
-    (16, 'Northampton', 1),
-    (16, 'Predestination', 1),
+    (17, 'Great Awakening', 1),
+    (18, 'Sinners in the Hands of an Angry God', 1),
+    (19, 'Northampton', 1),
+    (20, 'Predestination', 1),
 
     (21, 'The Raven', 1),
-    (21, 'Baltimore', 1),
-    (21, 'Madness and guilt', 1),
-    (21, 'Gothic fiction', 1),
-    (21, 'C. Auguste Dupin', 1);
+    (22, 'Baltimore', 1),
+    (23, 'Madness and guilt', 1),
+    (24, 'Gothic fiction', 1),
+    (25, 'C. Auguste Dupin', 1);
