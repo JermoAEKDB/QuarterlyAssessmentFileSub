@@ -1,12 +1,12 @@
 import sqlite3
 
-# ANSI escape codes for colors
+
 GREEN = '\033[92m'
 RED = '\033[91m'
 RESET = '\033[0m'
 
 def get_author_data(author):
-    conn = sqlite3.connect("questions_answers.db")
+    conn = sqlite3.connect("QuarterlyAssessmentDB.sql")
     cursor = conn.cursor()
 
     cursor.execute(f"SELECT question, answer FROM {author}")
