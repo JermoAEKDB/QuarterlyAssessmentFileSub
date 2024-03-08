@@ -66,7 +66,7 @@ questions_and_answers = {
 }
 
 def populate_tables():
-    conn = sqlite3.connect("questions_answers.db")
+    conn = sqlite3.connect("QuarterlyAssessmentDB.sql")
     cursor = conn.cursor()
 
     for author in authors:
